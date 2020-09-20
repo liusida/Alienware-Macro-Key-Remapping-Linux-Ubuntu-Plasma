@@ -25,7 +25,7 @@ dmesg | grep key
 
 # Default keycode for Macro Keys
 
-This map is meaningful, but some of the keycode cannot be seen by KDE or `xev`.
+This map is tricky. It seems useful, but some of the keycode cannot be seen by KDE or `xev`. And the keycodes here actually differ from what we need to use in `setkeycodes` by 8! (e.g. `XF86Launch1` here is `156`, but we need to set it using `setkeycodes e012 148` )
 
 ```
 keycode 128 = XF86LaunchA NoSymbol XF86LaunchA
