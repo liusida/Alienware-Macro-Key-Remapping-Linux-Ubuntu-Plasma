@@ -51,7 +51,7 @@ xmodmap -pke | grep Lau
 
 Finally, I decided to set up the left 6 macro keys and one right macro keys. Cannot find available key slot for the rest three.
 
-create a file in `/etc/init.d/` with arbitrary name (I used `macrokey_remap`), and put these commands in.
+create a file in `/etc/init.d/` with arbitrary name (I used `macrokey-remap`), and put these commands in.
 
 ```bash
 #!/bin/sh
@@ -77,8 +77,8 @@ setkeycodes e017 191
 
 Make it active
 ```bash
-sudo chmod a+x /etc/init.d/macrokey_remap
-sudo update-rc.d macrokey_remap defaults
+sudo chmod a+x /etc/init.d/macrokey-remap
+sudo ln -s /etc/init.d/macrokey-remap /etc/rc2.d/S99macrokey-remap
 ```
 
 If `xev` can see the key press, KDE Global Shortcut Setting can use the key.
