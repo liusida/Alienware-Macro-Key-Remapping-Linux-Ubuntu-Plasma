@@ -54,6 +54,7 @@ Finally, I decided to set up the left 6 macro keys and one right macro keys. Can
 create a file in `/etc/init.d/` with arbitrary name (I used `macrokey_remap`), and put these commands in.
 
 ```bash
+#!/bin/sh
 # XF86WakeUp
 setkeycodes e011 143
 # XF86Launch1
@@ -72,6 +73,12 @@ setkeycodes e017 191
 # setkeycodes e018 188
 # setkeycodes e01a 202
 # setkeycodes e01b 203
+```
+
+Make it active
+```bash
+sudo chmod a+x /etc/init.d/macrokey_remap
+sudo update-rc.d macrokey_remap defaults
 ```
 
 If `xev` can see the key press, KDE Global Shortcut Setting can use the key.
