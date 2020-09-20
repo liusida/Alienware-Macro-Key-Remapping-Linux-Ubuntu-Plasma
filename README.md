@@ -4,6 +4,7 @@ These macro keys slept for too long in Linux system, until they were finally wok
 
 # Scancode for Macro Keys From X,1,2,...,9
 
+```
 XF86LaunchX = e011
 XF86Launch1 = e012
 XF86Launch2 = e013
@@ -14,6 +15,7 @@ XF86Launch6 = e017
 XF86Launch7 = e018
 XF86Launch8 = e01a
 XF86Launch9 = e01b
+```
 
 Infomation obtained using:
 
@@ -25,6 +27,7 @@ dmesg | grep key
 
 This map is meaningful, but some of the keycode cannot be seen by KDE or `xev`.
 
+```
 keycode 128 = XF86LaunchA NoSymbol XF86LaunchA
 keycode 156 = XF86Launch1 NoSymbol XF86Launch1
 keycode 157 = XF86Launch2 NoSymbol XF86Launch2
@@ -36,6 +39,7 @@ keycode 196 = XF86Launch9 NoSymbol XF86Launch9
 keycode 210 = XF86Launch3 NoSymbol XF86Launch3
 keycode 211 = XF86Launch4 NoSymbol XF86Launch4
 keycode 212 = XF86LaunchB NoSymbol XF86LaunchB
+```
 
 Infomation obtained using:
 
@@ -76,10 +80,12 @@ If `xev` can see the key press, KDE Global Shortcut Setting can use the key.
 
 yet another different values
 
+```
 148 = Launch(3)
 149 = Launch(4)
 184 = Launch(7)
 185 = Launch(8)
+```
 
 Infomation obtained while I was setting them in Global Shortcut:
 
